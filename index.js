@@ -78,6 +78,13 @@ exports.createCredentials = function () {
   ].join('\n'))
 }
 
+exports.getRandomValues = function (array) {
+  for (let i = 0, l = array.length; i < l; i++) {
+    array[i] = Math.floor(Math.random() * 256);
+  }
+  return array;
+}
+
 exports.constants = {
   'DH_CHECK_P_NOT_SAFE_PRIME': 2,
   'DH_CHECK_P_NOT_PRIME': 1,
